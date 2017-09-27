@@ -4,6 +4,7 @@ import static java.util.Objects.requireNonNull;
 import static seedu.address.commons.util.CollectionUtil.requireAllNonNull;
 
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.Objects;
 import java.util.Set;
 
@@ -22,7 +23,6 @@ public class Person implements ReadOnlyPerson {
     private ObjectProperty<Phone> phone;
     private ObjectProperty<Email> email;
     private ObjectProperty<Address> address;
-
     private ObjectProperty<UniqueTagList> tags;
 
     /**
@@ -49,6 +49,18 @@ public class Person implements ReadOnlyPerson {
     public void setName(Name name) {
         this.name.set(requireNonNull(name));
     }
+
+    /**
+     * Sorts person name in alphabetical order
+     */
+    public static Comparator<Person> sort = new Comparator<Person>() {
+        public int compare(Person p1, Person p2) {
+            String p1Name = p1.getName().toString();
+            String p2Name = p2.getName().toString();
+
+            return p1Name.compareTo(p2Name);
+        }
+    };
 
     @Override
     public ObjectProperty<Name> nameProperty() {
