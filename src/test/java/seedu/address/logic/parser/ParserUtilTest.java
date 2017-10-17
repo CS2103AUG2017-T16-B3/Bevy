@@ -130,7 +130,7 @@ public class ParserUtilTest {
 
     @Test
     public void parseDateOptionalEmptyReturnsOptionalEmpty() throws Exception {
-        assertFalse(ParserUtil.parseDate(Optional.empty()).isPresent());
+        assertTrue(ParserUtil.parseDate(Optional.empty()).isPresent());
     }
 
     @Test
@@ -155,7 +155,7 @@ public class ParserUtilTest {
 
     @Test
     public void parseAddressOptionalEmptyReturnsOptionalEmpty() throws Exception {
-        assertFalse(ParserUtil.parseAddress(Optional.empty()).isPresent());
+        assertTrue(ParserUtil.parseAddress(Optional.empty()).isPresent());
     }
 
     @Test
@@ -180,7 +180,7 @@ public class ParserUtilTest {
 
     @Test
     public void parseEmailOptionalEmptyReturnsOptionalEmpty() throws Exception {
-        assertFalse(ParserUtil.parseEmail(Optional.empty()).isPresent());
+        assertTrue(ParserUtil.parseEmail(Optional.empty()).isPresent());
     }
 
     @Test
