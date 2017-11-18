@@ -31,7 +31,7 @@ public class DeleteCommand extends UndoableCommand {
         this.zeroBasedTargetIndexes = zeroBasedTargetIndexes;
     }
 
-    // @@author johnweikangong-reused
+    // @@author johnweikangongreused
     @Override
     public CommandResult executeUndoableCommand() throws CommandException {
 

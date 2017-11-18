@@ -59,7 +59,7 @@ public class CommandBox extends UiPart<Region> {
         historySnapshot = logic.getHistorySnapshot();
     }
 
-    // @@author johnweikangong
+    // @@author johnweikangongreused
     /**
      * Observes the text input and show matched suggestions.
      */
